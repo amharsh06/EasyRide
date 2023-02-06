@@ -1,5 +1,6 @@
 import { Alert, Text, View, Button } from 'react-native'
 import React, { Component } from 'react'
+import IntroProps from './IntroProps';
 
 export default class Intro extends Component {
   constructor(props) {
@@ -31,6 +32,7 @@ export default class Intro extends Component {
           title="Learn More"
           color="#841584"
         />
+        <IntroProps introProp={"Intro"}/>
       </View>
     )
   }
