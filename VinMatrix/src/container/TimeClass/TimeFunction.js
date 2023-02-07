@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
   int: {
     marginTop: 30,
     textAlign: 'center',
-    color: Colors.fonttwo,
+    color: 'white',
     fontSize: 30,
     fontFamily: 'DancingScript-Bold',
 
