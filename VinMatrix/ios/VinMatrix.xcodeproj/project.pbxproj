@@ -14,6 +14,12 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-VinMatrix-VinMatrixTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-VinMatrix-VinMatrixTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		0CDF0969696A49F3A70F0F6C /* DancingScript-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC964875C8F480487420C5C /* DancingScript-Bold.ttf */; };
+		206B2F6BAB3048599A5B13DB /* DancingScript-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8ABB62878914B1D87C73B8F /* DancingScript-Medium.ttf */; };
+		9FB3BD195278478E82621A80 /* DancingScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 814704FF6AD84DD4A837D22C /* DancingScript-Regular.ttf */; };
+		7A33C2D2A2EB46E582BDD1A5 /* DancingScript-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0ACB2C471C24FFEA577D34A /* DancingScript-SemiBold.ttf */; };
+		240B8FDF73A9482BAA22BB4C /* PTSansNarrow-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 597B9695108B4F9A87EC436C /* PTSansNarrow-Bold.ttf */; };
+		6F40E9AFE2D24F3DB915A9AC /* PTSansNarrow-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F725AF9F5344476886DF887 /* PTSansNarrow-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,12 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = VinMatrix/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-VinMatrix-VinMatrixTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VinMatrix-VinMatrixTests.release.xcconfig"; path = "Target Support Files/Pods-VinMatrix-VinMatrixTests/Pods-VinMatrix-VinMatrixTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		0CC964875C8F480487420C5C /* DancingScript-Bold.ttf */ = {isa = PBXFileReference; name = "DancingScript-Bold.ttf"; path = "../src/assets/fonts/DancingScript-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F8ABB62878914B1D87C73B8F /* DancingScript-Medium.ttf */ = {isa = PBXFileReference; name = "DancingScript-Medium.ttf"; path = "../src/assets/fonts/DancingScript-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		814704FF6AD84DD4A837D22C /* DancingScript-Regular.ttf */ = {isa = PBXFileReference; name = "DancingScript-Regular.ttf"; path = "../src/assets/fonts/DancingScript-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D0ACB2C471C24FFEA577D34A /* DancingScript-SemiBold.ttf */ = {isa = PBXFileReference; name = "DancingScript-SemiBold.ttf"; path = "../src/assets/fonts/DancingScript-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		597B9695108B4F9A87EC436C /* PTSansNarrow-Bold.ttf */ = {isa = PBXFileReference; name = "PTSansNarrow-Bold.ttf"; path = "../src/assets/fonts/PTSansNarrow-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8F725AF9F5344476886DF887 /* PTSansNarrow-Regular.ttf */ = {isa = PBXFileReference; name = "PTSansNarrow-Regular.ttf"; path = "../src/assets/fonts/PTSansNarrow-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +134,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				0963A23144434650828D3266 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -147,6 +160,20 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		0963A23144434650828D3266 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				0CC964875C8F480487420C5C /* DancingScript-Bold.ttf */,
+				F8ABB62878914B1D87C73B8F /* DancingScript-Medium.ttf */,
+				814704FF6AD84DD4A837D22C /* DancingScript-Regular.ttf */,
+				D0ACB2C471C24FFEA577D34A /* DancingScript-SemiBold.ttf */,
+				597B9695108B4F9A87EC436C /* PTSansNarrow-Bold.ttf */,
+				8F725AF9F5344476886DF887 /* PTSansNarrow-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -244,6 +271,12 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				0CDF0969696A49F3A70F0F6C /* DancingScript-Bold.ttf in Resources */,
+				206B2F6BAB3048599A5B13DB /* DancingScript-Medium.ttf in Resources */,
+				9FB3BD195278478E82621A80 /* DancingScript-Regular.ttf in Resources */,
+				7A33C2D2A2EB46E582BDD1A5 /* DancingScript-SemiBold.ttf in Resources */,
+				240B8FDF73A9482BAA22BB4C /* PTSansNarrow-Bold.ttf in Resources */,
+				6F40E9AFE2D24F3DB915A9AC /* PTSansNarrow-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

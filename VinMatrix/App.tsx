@@ -15,14 +15,14 @@ function App(): JSX.Element {
 
   return (
 <View>
-<Intro />
-<Counter />
-<IntroFun />
-<CounterFun />
-<Time />
+{/* <Intro /> */}
+{/* <Counter /> */}
+{/* <IntroFun /> */}
+{/* <CounterFun /> */}
+{/* <Time /> */}
 <TimeFunction/>
-<Country/>
-<CountryFun/>
+{/* <Country/> */}
+{/* <CountryFun/> */}
 </View>
   );
 }
