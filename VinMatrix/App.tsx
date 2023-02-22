@@ -20,7 +20,7 @@ function App(): JSX.Element {
 {/* <IntroFun /> */}
 {/* <CounterFun /> */}
 {/* <Time /> */}
-<TimeFunction/>
+{/* <TimeFunction/> */}
 {/* <Country/> */}
 {/* <CountryFun/> */}
 </View>
