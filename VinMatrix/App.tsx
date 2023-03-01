@@ -12,6 +12,7 @@ import Country from './src/container/Intro/Country';
 import CountryFun from './src/container/Intro/CountryFun';
 import { Provider } from 'react-redux';
 import { configStore } from './src/redux/Store';
+import Post from './src/container/post/Post';
 function App(): JSX.Element {
   const store = configStore();
 
@@ -27,7 +28,7 @@ function App(): JSX.Element {
       {/* <Country/> */}
       {/* <CountryFun/> */}
       <Provider store={store}>
-        <Counter />
+        <Post/>
       </Provider>
     </View>
   );
