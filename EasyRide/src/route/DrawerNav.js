@@ -7,14 +7,14 @@ import { Demo } from './StackNavigator';
 const Drawer = createDrawerNavigator();
 
 
-const DrawerNav=()=>{
-    return(
-<Drawer.Navigator>
-      <Drawer.Screen name="Demo" component={TabNavigator} />
-      <Drawer.Screen name="Hello" component={Demo} />
-    </Drawer.Navigator>
+const DrawerNav = () => {
+    return (
+        <Drawer.Navigator>
+            <Drawer.Screen name="Demo" component={TabNavigator} />
+            <Drawer.Screen name="Hello" component={Demo} />
+        </Drawer.Navigator>
 
     )
 }
 
-export{DrawerNav}
+export { DrawerNav }
