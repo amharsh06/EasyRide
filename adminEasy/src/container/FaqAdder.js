@@ -20,7 +20,7 @@ export default function FaqAdder() {
     }, [])
     const addData = () => {
         let data = {
-            // id: id,
+            id: id,
             title: title,
             body: description,
         }
@@ -46,9 +46,11 @@ export default function FaqAdder() {
         dispatch(putData(upData))
     }
     const clear = () => {
-        
-        setDescription(null),
-            setTitle(null)
+
+        setDescription(''),
+            setTitle(''),
+            setUpdate(false)
+
     }
     // console.log(postdata)
     return (
