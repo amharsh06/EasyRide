@@ -20,7 +20,7 @@ export default function FaqAdder() {
     }, [])
     const addData = () => {
         let data = {
-            id: id,
+            // id: id,
             title: title,
             body: description,
         }
@@ -32,18 +32,23 @@ export default function FaqAdder() {
     }
 
     const handleUpdate = (item) => {
-        setId(item.id.toString())
+        setId(item.id)
         setTitle(item.title)
         setDescription(item.body)
         setUpdate(true)
     }
     const updateData = () => {
         let upData = {
-            id: parseInt(id),
+            id: id,
             title: title,
             body: description,
         }
         dispatch(putData(upData))
+    }
+    const clear = () => {
+        
+        setDescription(null),
+            setTitle(null)
     }
     // console.log(postdata)
     return (
@@ -51,7 +56,7 @@ export default function FaqAdder() {
             <ScrollView>
                 <View style={styles.conatiner}>
                     <View style={styles.conatiner1}>
-                        <TextInput placeholder='ID' value={id} onChangeText={setId} placeholderTextColor={'black'} style={styles.TextInput} />
+
                         <TextInput placeholder='Title' value={title} onChangeText={setTitle} placeholderTextColor={'black'} style={styles.TextInput} />
                         <TextInput placeholder='Description' value={description} onChangeText={setDescription} placeholderTextColor={'black'} style={styles.TextInput} />
                     </View>
@@ -60,6 +65,9 @@ export default function FaqAdder() {
                         <TouchableOpacity style={styles.button} onPress={update ? updateData : addData}>
                             <Text>ADD</Text>
                         </TouchableOpacity>
+                        <TouchableOpacity style={styles.button} onPress={clear}>
+                            <Text>Clear</Text>
+                        </TouchableOpacity>
 
                         {
                             postdata.post.map((item, index) => {
@@ -67,11 +75,11 @@ export default function FaqAdder() {
                                     <>
                                         <View style={styles.con}>
                                             <View style={styles.con1}>
-                                                <Text style={styles.txt2}>{item.id}</Text>
+                                                {/* <Text style={styles.txt2}>{item.id}</Text> */}
                                                 <Text style={styles.text}><Text style={styles.txt2}>Title:--</Text>{item.title}</Text>
                                                 <Text style={styles.text}><Text style={styles.txt2}>Description:--</Text>{item.body}
                                                     <MaterialCommunityIcons name="delete" size={25} onPress={() => { handleDelete(item.id) }} />
-                                                    <MaterialIcons name="edit" size={20} onPress={() => handleUpdate(item)} /></Text>
+                                                    <MaterialIcons name="edit" size={25} onPress={() => handleUpdate(item)} /></Text>
                                             </View>
                                         </View>
 
@@ -127,7 +135,8 @@ const styles = StyleSheet.create({
         borderRadius: 15,
         paddingHorizontal: 40,
         paddingVertical: 20,
-        alignItems: 'center'
+        alignItems: 'center',
+        margin: 10,
     },
     text: {
         color: 'black'
@@ -137,9 +146,10 @@ const styles = StyleSheet.create({
     },
     con1: {
         backgroundColor: 'white',
-        height: 250,
+        height: 150,
         width: 330,
         marginTop: '5%',
+
         borderRadius: 10,
         borderRadius: 10,
         elevation: 10,
