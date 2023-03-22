@@ -35,6 +35,17 @@ export default function Extra() {
 
     const [pin, setPin] = useState(null);
 
+    const vehicleData = [
+
+        { label1: 'Car', value: '1' },
+        { label1: 'Bike', value: '2' },
+        { label1: 'Scooter', value: '3' },
+
+
+
+    ];// keyboardType = 'numeric'
+
+    const [vehicle, setVehicle] = useState(null);
     return (
         < >
             <View style={styles.container}>
@@ -102,6 +113,26 @@ export default function Extra() {
                         onChange={item => {
                             setPin(item.value);
                         }}
+
+
+
+                    />
+                    <Dropdown
+                        style={styles.dropdown}
+                        placeholderStyle={styles.placeholderStyle}
+                        selectedTextStyle={styles.selectedTextStyle}
+                        iconStyle={styles.iconStyle}
+                        data={vehicleData}
+                        maxHeight={300}
+                        labelField="label1"
+                        valueField="value"
+                        placeholder="Vehical Type"
+                        value={vehicle}
+                        itemTextStyle={{ color: 'black' }}
+                        onChange={item => {
+                            setVehicle(item.value);
+                        }}
+
 
 
                     />
