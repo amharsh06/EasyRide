@@ -8,7 +8,15 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 
 export default function Extra() {
     const [date, setDate] = useState(new Date())
+    const [time, setTime] = useState(new Date())
+
     const [open, setOpen] = useState(false)
+    const [openTime, setOpenTime] = useState(false)
+
+    const [show, setShow] = useState(true)
+    const [showTime, setShowTime] = useState(true)
+
+
 
     const data1 = [
 
@@ -18,6 +26,15 @@ export default function Extra() {
     ];// keyboardType = 'numeric'
 
     const [value, setValue] = useState(null);
+    const data2 = [
+
+        { label1: '395006', value: '1' },
+        { label1: '395010', value: '2' },
+
+    ];// keyboardType = 'numeric'
+
+    const [pin, setPin] = useState(null);
+
     return (
         < >
             <View style={styles.container}>
@@ -29,9 +46,11 @@ export default function Extra() {
 
                     <TextInput placeholder='Last Name' placeholderTextColor={'#898989'} style={styles.textname} />
 
-
                     <TouchableOpacity onPress={() => setOpen(true)} >
-                        <Text style={styles.textnamee} >DOB</Text>
+                        <Text style={[styles.textnamee]}>{show ? "DOB" : <Text style={styles.textname}>{date.toDateString()}</Text>}</Text>
+
+
+
                     </TouchableOpacity>
                     <DatePicker
                         mode="date"
@@ -41,6 +60,8 @@ export default function Extra() {
                         onConfirm={(date) => {
                             setOpen(false)
                             setDate(date)
+                            setShow(false)
+                            // console.log(date);
                         }}
                         onCancel={() => {
                             setOpen(false)
@@ -50,10 +71,8 @@ export default function Extra() {
                         style={styles.dropdown}
                         placeholderStyle={styles.placeholderStyle}
                         selectedTextStyle={styles.selectedTextStyle}
-                        inputSearchStyle={styles.inputSearchStyle}
                         iconStyle={styles.iconStyle}
                         data={data1}
-                        search
                         maxHeight={300}
                         labelField="label1"
                         valueField="value"
@@ -66,25 +85,45 @@ export default function Extra() {
 
 
                     />
-                    <TextInput placeholder='Aadhar Number' keyboardType='numeric' placeholderTextColor={'#898989'} style={styles.textname} />
-                    <TextInput placeholder='Drvier Licence Number' keyboardType='numeric' placeholderTextColor={'#898989'} style={styles.textname} />
+                    <Dropdown
+                        style={styles.dropdown}
+                        placeholderStyle={styles.placeholderStyle}
+                        selectedTextStyle={styles.selectedTextStyle}
+                        inputSearchStyle={styles.inputSearchStyle}
+                        iconStyle={styles.iconStyle}
+                        data={data2}
+                        search
+                        maxHeight={300}
+                        labelField="label1"
+                        valueField="value"
+                        placeholder="Pincode"
+                        value={pin}
+                        itemTextStyle={{ color: 'black' }}
+                        onChange={item => {
+                            setPin(item.value);
+                        }}
 
-                    <TouchableOpacity onPress={() => setOpen(true)} >
-                        <Text style={styles.textnamee} >DL Expire Date</Text>
+
+                    />
+                    <TouchableOpacity onPress={() => setOpenTime(true)} >
+                        <Text style={[styles.textnamee]}>{showTime ? "Time" : <Text style={styles.textname}>{time.toLocaleTimeString()}</Text>}</Text>
                     </TouchableOpacity>
                     <DatePicker
-                        mode="date"
+                        mode="time"
                         modal
-                        open={open}
-                        date={date}
+                        open={openTime}
+                        date={time}
                         onConfirm={(date) => {
-                            setOpen(false)
-                            setDate(date)
+                            setOpenTime(false)
+                            setTime(date)
+                            setShowTime(false)
+                            // console.log(date);
                         }}
                         onCancel={() => {
-                            setOpen(false)
+                            setOpenTime(false)
                         }} />
-                    <TextInput placeholder='Vehical Number' keyboardType='numeric' placeholderTextColor={'#898989'} style={styles.textname} />
+
+
                     <TouchableOpacity style={styles.button}>
                         <Text style={styles.btnText}>Next</Text>
                     </TouchableOpacity>
@@ -200,5 +239,8 @@ const styles = StyleSheet.create({
         marginTop: 20,
         padding: 10,
         color: '#898989',
+    },
+    bold: {
+        color: '#000'
     }
 })
